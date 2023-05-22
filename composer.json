@@ -1,0 +1,22 @@
+{
+    "name": "effectra/third-party",
+    "description": "The Effectra ThirdParty package.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Effectra\\ThirdParty\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohammed Taha",
+            "email": "bmt.mohammedtaha@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "guzzlehttp/guzzle": "7.7.x-dev"
+    },
+    "minimum-stability": "dev"
+}
