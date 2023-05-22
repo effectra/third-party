@@ -152,6 +152,70 @@ $accessToken = $google->getAccessToken($code);
 $user = $google->getUser($accessToken);
 ```
 
+## OAuthServiceInterface
+
+
+
+The `OAuthServiceInterface` is an interface that defines the contract for an OAuth service. It provides methods for retrieving configuration, authorization URL, access token, and user data from an OAuth service.
+
+### Usage
+
+To use this interface, you need to create a class that implements it and provides the necessary functionality. Here's an example of how you can implement the `OAuthServiceInterface`:
+
+```php
+<?php
+
+namespace Effectra\ThirdParty;
+
+class MyOAuthService implements OAuthServiceInterface
+{
+    // Implement the getConfig() method
+    public function getConfig(): array
+    {
+        // Return the configuration array for the OAuth service
+    }
+
+    // Implement the getAuthURL() method
+    public function getAuthURL(): string
+    {
+        // Return the authorization URL for the OAuth service
+    }
+
+    // Implement the getAccessToken() method
+    public function getAccessToken(string $code): string
+    {
+        // Get the access token for the OAuth service using the authorization code
+    }
+
+    // Implement the getUser() method
+    public function getUser(string $token): ?array
+    {
+        // Get the user data from the OAuth service using the access token
+    }
+}
+```
+
+In the above example, you need to replace the placeholder methods with your actual implementation based on the OAuth service you are integrating with.
+
+### Method Overview
+
+#### `getConfig(): array`
+
+This method returns the configuration array for the OAuth service.
+
+#### `getAuthURL(): string`
+
+This method returns the authorization URL for the OAuth service.
+
+#### `getAccessToken(string $code): string`
+
+This method retrieves the access token for the OAuth service using the authorization code provided as a parameter.
+
+#### `getUser(string $token): ?array`
+
+This method retrieves the user data from the OAuth service using the access token provided as a parameter. It returns an array containing user data or `null` if the operation is unsuccessful.
+
+
 ## License
 
 This library is open source and available under the [MIT License](LICENSE).
